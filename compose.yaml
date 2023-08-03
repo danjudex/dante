@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  dante:
+    image: vimagick/dante
+    ports:
+      - "1080:1080"
+    volumes:
+      - ./dante:/etc/dante
+    tmpfs:
+      - /run
+    restart: unless-stopped
